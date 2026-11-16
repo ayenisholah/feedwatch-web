@@ -1,0 +1,6 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": ["e2e/**/*.spec.ts"],
+  "project": ["app/**", "components/**", "lib/**", "test/**", "e2e/**"],
+  "ignoreExportsUsedInFile": true
+}

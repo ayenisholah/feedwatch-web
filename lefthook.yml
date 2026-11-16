@@ -1,0 +1,25 @@
+# Fast local feedback. CI is the source of truth.
+pre-commit:
+  parallel: true
+  jobs:
+    - name: format
+      glob: "*.{ts,tsx,css,js,mjs,json,md,yml,yaml}"
+      run: npx prettier --check --ignore-unknown {staged_files}
+    - name: lint
+      glob: "*.{ts,tsx,js,mjs}"
+      run: npx eslint --no-warn-ignored {staged_files}
+    - name: secrets
+      run: if command -v gitleaks >/dev/null; then gitleaks protect --staged --redact --no-banner; else echo "gitleaks not installed; CI will scan"; fi
+
+commit-msg:
+  jobs:
+    - name: commitlint
+      run: npx commitlint --edit {1}
+
+pre-push:
+  jobs:
+    - name: no-direct-push-to-main
+      use_stdin: true
+      run: sh scripts/block-main-push.sh
+    - name: typecheck and test
+      run: npm run typecheck && npm test

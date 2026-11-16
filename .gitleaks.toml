@@ -1,0 +1,3 @@
+# Gitleaks' default rules.
+[extend]
+useDefault = true
