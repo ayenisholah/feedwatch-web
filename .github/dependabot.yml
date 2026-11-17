@@ -5,6 +5,13 @@ updates:
     schedule: { interval: weekly }
     open-pull-requests-limit: 5
     commit-message: { prefix: "chore(deps)" }
+    ignore:
+      # The project runs on Node 24 (.nvmrc), so its types stay on that major.
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+      # TypeScript 7 fails with the current Next.js toolchain; revisit when Next.js supports it.
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: github-actions
     directory: /
     schedule: { interval: weekly }
