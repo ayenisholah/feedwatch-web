@@ -1,6 +1,6 @@
 # Progress
 
-**Updated:** 2026-11-16
+**Updated:** 2026-11-18
 
 Read this first. Update it in the same commit as the work. The system-wide state is in `../feedwatch-platform/docs/PROGRESS.md`.
 
@@ -20,6 +20,7 @@ After that: `feat/overview` (StatWidgets, chain SegmentedControl, feed table), `
 
 | Date       | Work                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2026-11-18 | `ci/deploy-on-merge` (NFR-3): a `Deploy` workflow calls feedwatch-platform's reusable deploy workflow after `CI` passes on `main`, so every merge reaches production (platform ADR 0008). Needs the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` secrets from platform `scripts/aws/set-deploy-secrets.sh`.                                                       |
 | 2026-11-16 | Scaffold: Next.js 16 static export; Frox tokens, `cn`, theme and components (Alert, Badge, Button, Card, EmptyState, PageHeader, SegmentedControl, Spinner, StatWidget, ThemeToggle, trimmed icons) copied from LendLoop with their tests; placeholder home page; Vitest (28 tests), Playwright smoke in light and dark with axe; ESLint, Prettier, knip, jscpd; CI. |
 
 ## In progress
