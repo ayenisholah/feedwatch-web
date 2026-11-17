@@ -34,3 +34,4 @@ Nothing.
 
 - Copied component fixes for `noUncheckedIndexedAccess`: `SegmentedControl` guards its option and key lookups.
 - Zod was removed for now, because knip fails on unused dependencies. Add it back in `feat/api-client`.
+- Generate `package-lock.json` under Node 24 (`docker run --rm -u "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/app" -w /app node:24 npm install --package-lock-only`). A lockfile from a newer local Node leaves out optional entries, and `npm ci` fails in CI.
