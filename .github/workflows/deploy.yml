@@ -1,0 +1,19 @@
+# Deploys Feedwatch to production after CI passes on main. The steps live in feedwatch-platform
+# .github/workflows/deploy.yml (ADR 0008); this repo only triggers them. Needs the repository secrets
+# AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY, set by feedwatch-platform scripts/aws/set-deploy-secrets.sh.
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: [CI]
+    branches: [main]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    uses: ayenisholah/feedwatch-platform/.github/workflows/deploy.yml@main
+    secrets: inherit
