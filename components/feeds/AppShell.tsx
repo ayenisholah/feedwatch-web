@@ -10,7 +10,10 @@ import { formatAgo } from "@/lib/format";
 import { useNow } from "@/lib/use-query-param";
 
 /** The pages in the main navigation. Each page is added here when it's built. */
-export const NAV = [{ id: "overview", href: "/", label: "Overview" }] as const;
+export const NAV = [
+  { id: "overview", href: "/", label: "Overview" },
+  { id: "compare", href: "/compare/", label: "Compare" },
+] as const;
 export type NavId = (typeof NAV)[number]["id"];
 
 /** Grafana's provisioned dashboard, on the same origin (feedwatch-platform `caddy/Caddyfile`). */
