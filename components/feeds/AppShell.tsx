@@ -13,6 +13,7 @@ import { useNow } from "@/lib/use-query-param";
 export const NAV = [
   { id: "overview", href: "/", label: "Overview" },
   { id: "compare", href: "/compare/", label: "Compare" },
+  { id: "incidents", href: "/incidents/", label: "Incidents" },
 ] as const;
 export type NavId = (typeof NAV)[number]["id"];
 
