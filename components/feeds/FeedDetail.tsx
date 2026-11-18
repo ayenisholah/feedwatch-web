@@ -21,6 +21,7 @@ import { formatAgo, formatDuration, formatPercent, formatPrice, formatUtc, MISSI
 import { useNow, useSearchParams } from "@/lib/use-query-param";
 import { AgeBar } from "./AgeBar";
 import { DataState } from "./DataState";
+import { DetailSkeleton } from "./Skeleton";
 import { LineChart } from "./LineChart";
 import { StatusBadge } from "./StatusBadge";
 
@@ -171,7 +172,7 @@ function Loaded({ chain, id }: { chain: Chain; id: string }) {
   return (
     <>
       {header}
-      <DataState result={result} retry={result.retry} nowMs={now} empty={null}>
+      <DataState result={result} retry={result.retry} loading={<DetailSkeleton />} nowMs={now} empty={null}>
         {(detail) => <Reading detail={detail} nowMs={now} />}
       </DataState>
     </>
@@ -189,7 +190,17 @@ export function FeedDetail() {
       ← All feeds
     </Link>
   );
-  if (params === null) return back;
+  if (params === null) {
+    return (
+      <>
+        {back}
+        <div role="status" aria-busy="true">
+          <span className="sr-only">Loading feed data…</span>
+          <DetailSkeleton />
+        </div>
+      </>
+    );
+  }
   const chain = ChainSchema.safeParse(params.get("chain"));
   const id = params.get("id") ?? "";
   return (

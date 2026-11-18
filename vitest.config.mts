@@ -9,12 +9,22 @@ export default defineConfig({
   resolve: { alias: { "@": root } },
   test: {
     environment: "jsdom",
-    include: ["components/**/*.test.tsx", "lib/**/*.test.ts", "app/**/*.test.tsx"],
+    include: ["components/**/*.test.tsx", "lib/**/*.test.{ts,tsx}", "app/**/*.test.{ts,tsx}"],
     setupFiles: ["./test/setup-ui.ts"],
     coverage: {
       provider: "v8",
-      include: ["components/**/*.tsx", "lib/**/*.ts", "app/**/*.tsx"],
-      exclude: ["**/*.test.*", "app/layout.tsx", "components/ui/icons.tsx"],
+      include: ["components/**/*.tsx", "lib/**/*.{ts,tsx}", "app/**/*.{ts,tsx}"],
+      exclude: [
+        "**/*.test.*",
+        "app/layout.tsx",
+        "components/ui/icons.tsx",
+        // Image routes and their renderer need next/og; `next build` writes every image.
+        "app/**/opengraph-image.tsx",
+        "app/**/twitter-image.tsx",
+        "app/apple-icon.tsx",
+        "lib/og-image.tsx",
+        "lib/api/schema.ts",
+      ],
       // Feedwatch's own code (app/, lib/, components/feeds/) is held to 100%. components/ui was copied from the LendLoop Frox library
       // with its existing tests; its floor is lower and rises as M3 adds tests for the parts it uses.
       thresholds: {

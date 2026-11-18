@@ -8,6 +8,7 @@ import { useApi } from "@/lib/api/use-api";
 import { cn } from "@/lib/cn";
 import { formatAgo } from "@/lib/format";
 import { useNow } from "@/lib/use-query-param";
+import { Logo } from "./Logo";
 
 /** The pages in the main navigation. Each page is added here when it's built. */
 export const NAV = [
@@ -54,8 +55,8 @@ export function AppShell({ current, children }: { current?: NavId; children: Rea
     <>
       <header className="border-b border-line bg-surface">
         <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-4 py-3 sm:px-6">
-          <Link href="/" className={cn("text-subtitle-semibold text-fg", link)}>
-            Feedwatch
+          <Link href="/" aria-label="Feedwatch home" className={link}>
+            <Logo />
           </Link>
           <nav aria-label="Main" className="flex flex-wrap items-center gap-4 text-body">
             {NAV.map((item) => (

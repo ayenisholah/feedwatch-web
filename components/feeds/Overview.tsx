@@ -13,6 +13,7 @@ import { CHAIN_NAMES, filterFeeds, sortFeeds, summarize } from "@/lib/feeds";
 import { formatAgo } from "@/lib/format";
 import { useNow, useQueryParam } from "@/lib/use-query-param";
 import { DataState } from "./DataState";
+import { OverviewSkeleton } from "./Skeleton";
 import { FeedTable } from "./FeedTable";
 
 const CHAIN_FILTERS = ["all", ...ChainSchema.options] as const;
@@ -105,6 +106,7 @@ export function Overview() {
       <DataState
         result={result}
         retry={result.retry}
+        loading={<OverviewSkeleton />}
         nowMs={now}
         empty={
           <EmptyState

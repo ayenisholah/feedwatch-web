@@ -13,6 +13,7 @@ import { formatAgo, formatDuration, formatUtc, isoTime } from "@/lib/format";
 import { countIncidents, groupIncidents, type IncidentGroup, incidentDuration } from "@/lib/incidents";
 import { useNow, useQueryParam } from "@/lib/use-query-param";
 import { DataState } from "./DataState";
+import { IncidentsSkeleton } from "./Skeleton";
 import { StatusBadge } from "./StatusBadge";
 
 const STATUSES = ["open", "all"] as const;
@@ -110,7 +111,7 @@ function IncidentList({ status }: { status: Status }) {
       <EmptyState icon={<CheckIcon />} title="No incidents in the last 30 days" />
     );
   return (
-    <DataState result={result} retry={result.retry} nowMs={now} empty={empty}>
+    <DataState result={result} retry={result.retry} loading={<IncidentsSkeleton />} nowMs={now} empty={empty}>
       {(data) => {
         const { total, open } = countIncidents(data.incidents);
         return (
