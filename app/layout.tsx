@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
+import { SITE, structuredData } from "@/lib/site";
 import { themeInitScript } from "@/lib/theme";
 import "./globals.css";
 
@@ -11,10 +12,20 @@ const poppins = Poppins({
   display: "swap",
 });
 
+// Site-wide defaults; each page adds its own title, description and canonical URL (lib/site.ts).
+// Icons, the manifest and social images come from files in app/: icon.svg, apple-icon,
+// opengraph-image, twitter-image and manifest.ts.
 export const metadata: Metadata = {
-  title: { default: "Feedwatch", template: "%s · Feedwatch" },
-  description: "Freshness, missed updates and cross-chain spread for RedStone push price feeds.",
-  applicationName: "Feedwatch",
+  metadataBase: new URL(SITE.url),
+  title: { default: `${SITE.name}: ${SITE.tagline}`, template: `%s · ${SITE.name}` },
+  description: SITE.description,
+  applicationName: SITE.name,
+  keywords: [...SITE.keywords],
+  category: "technology",
+  openGraph: { siteName: SITE.name, type: "website", locale: "en_GB" },
+  twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true },
+  formatDetection: { telephone: false, address: false, email: false },
 };
 
 export const viewport: Viewport = {
@@ -30,6 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${poppins.variable} h-full antialiased`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData()) }} />
       </head>
       <body className="flex min-h-full flex-col bg-canvas font-sans text-body text-fg">{children}</body>
     </html>

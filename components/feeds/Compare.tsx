@@ -13,6 +13,7 @@ import { CHAIN_NAMES, feedHref, isIssue } from "@/lib/feeds";
 import { formatDuration, formatPercent, formatPrice } from "@/lib/format";
 import { useNow } from "@/lib/use-query-param";
 import { DataState } from "./DataState";
+import { CompareSkeleton } from "./Skeleton";
 import { StatusBadge } from "./StatusBadge";
 
 type Extreme = "high" | "low" | undefined;
@@ -147,6 +148,7 @@ export function Compare() {
       <DataState
         result={result}
         retry={result.retry}
+        loading={<CompareSkeleton />}
         nowMs={now}
         empty={<EmptyState icon={<ChartIcon />} title="No feed is present on all three chains right now" />}
       >
