@@ -1,0 +1,1318 @@
+{
+  "incidents": [
+    {
+      "id": "arbitrum:ARB:1794916562",
+      "chain": "arbitrum",
+      "feedId": "ARB",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:BTC:1794916562",
+      "chain": "arbitrum",
+      "feedId": "BTC",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:BUIDL_ARBITRUM_DAILY_ACCRUAL:1794916562",
+      "chain": "arbitrum",
+      "feedId": "BUIDL_ARBITRUM_DAILY_ACCRUAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:BUIDL_ARBITRUM_FUNDAMENTAL:1794916562",
+      "chain": "arbitrum",
+      "feedId": "BUIDL_ARBITRUM_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:ETH:1794916562",
+      "chain": "arbitrum",
+      "feedId": "ETH",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:EXOD_FUNDAMENTAL:1794916562",
+      "chain": "arbitrum",
+      "feedId": "EXOD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:USDC:1794916562",
+      "chain": "arbitrum",
+      "feedId": "USDC",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:USDT:1794916562",
+      "chain": "arbitrum",
+      "feedId": "USDT",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:XVS:1794916562",
+      "chain": "arbitrum",
+      "feedId": "XVS",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:cbBTC:1794916562",
+      "chain": "arbitrum",
+      "feedId": "cbBTC",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:eUSD:1794916562",
+      "chain": "arbitrum",
+      "feedId": "eUSD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:sUSDe_FUNDAMENTAL:1794916562",
+      "chain": "arbitrum",
+      "feedId": "sUSDe_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:sUSDe_RATE_PROVIDER:1794916562",
+      "chain": "arbitrum",
+      "feedId": "sUSDe_RATE_PROVIDER",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:sthUSD_FUNDAMENTAL:1794916562",
+      "chain": "arbitrum",
+      "feedId": "sthUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:strUSD_FUNDAMENTAL:1794916562",
+      "chain": "arbitrum",
+      "feedId": "strUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:thBILL_FUNDAMENTAL:1794916562",
+      "chain": "arbitrum",
+      "feedId": "thBILL_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:thUSD_FUNDAMENTAL:1794916562",
+      "chain": "arbitrum",
+      "feedId": "thUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:trUSD_FUNDAMENTAL:1794916562",
+      "chain": "arbitrum",
+      "feedId": "trUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:weETH_FUNDAMENTAL:1794916562",
+      "chain": "arbitrum",
+      "feedId": "weETH_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:wstETH/stETH:1794916562",
+      "chain": "arbitrum",
+      "feedId": "wstETH/stETH",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "arbitrum:wstETH:1794916562",
+      "chain": "arbitrum",
+      "feedId": "wstETH",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:AERO:1794916562",
+      "chain": "base",
+      "feedId": "AERO",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:BTC:1794916562",
+      "chain": "base",
+      "feedId": "BTC",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:CETES:1794916562",
+      "chain": "base",
+      "feedId": "CETES",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:CHECK:1794916562",
+      "chain": "base",
+      "feedId": "CHECK",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:CMC20_FUNDAMENTAL:1794916562",
+      "chain": "base",
+      "feedId": "CMC20_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:ETH:1794916562",
+      "chain": "base",
+      "feedId": "ETH",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:EUROB:1794916562",
+      "chain": "base",
+      "feedId": "EUROB",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:GILTS:1794916562",
+      "chain": "base",
+      "feedId": "GILTS",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:KAITO:1794916562",
+      "chain": "base",
+      "feedId": "KAITO",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:KTB:1794916562",
+      "chain": "base",
+      "feedId": "KTB",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:LBTC_FUNDAMENTAL:1794916562",
+      "chain": "base",
+      "feedId": "LBTC_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:MXNe:1794916562",
+      "chain": "base",
+      "feedId": "MXNe",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:PAXG:1794916562",
+      "chain": "base",
+      "feedId": "PAXG",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:PUFFER:1794916562",
+      "chain": "base",
+      "feedId": "PUFFER",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:SUSDz_FUNDAMENTAL:1794916562",
+      "chain": "base",
+      "feedId": "SUSDz_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:TESOURO:1794916562",
+      "chain": "base",
+      "feedId": "TESOURO",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:USDC:1794916562",
+      "chain": "base",
+      "feedId": "USDC",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:USDp_FUNDAMENTAL/USD:1794916562",
+      "chain": "base",
+      "feedId": "USDp_FUNDAMENTAL/USD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:USTRY:1794916562",
+      "chain": "base",
+      "feedId": "USTRY",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:UTY_FUNDAMENTAL:1794916562",
+      "chain": "base",
+      "feedId": "UTY_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:UTY_PEGGED_FUNDAMENTAL:1794916562",
+      "chain": "base",
+      "feedId": "UTY_PEGGED_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:XVS:1794916562",
+      "chain": "base",
+      "feedId": "XVS",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:YUSD_FUNDAMENTAL:1794916562",
+      "chain": "base",
+      "feedId": "YUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:cbBTC:1794916562",
+      "chain": "base",
+      "feedId": "cbBTC",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:fxUSD:1794916562",
+      "chain": "base",
+      "feedId": "fxUSD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:sUSDp_BASE_FUNDAMENTAL/USD:1794916562",
+      "chain": "base",
+      "feedId": "sUSDp_BASE_FUNDAMENTAL/USD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:sYUSD_FUNDAMENTAL:1794916562",
+      "chain": "base",
+      "feedId": "sYUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:syzUSD_FUNDAMENTAL/USD:1794916562",
+      "chain": "base",
+      "feedId": "syzUSD_FUNDAMENTAL/USD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:thBILL_FUNDAMENTAL:1794916562",
+      "chain": "base",
+      "feedId": "thBILL_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "base:wstETH:1794916562",
+      "chain": "base",
+      "feedId": "wstETH",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:ACRED_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "ACRED_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:AI:1794916562",
+      "chain": "ethereum",
+      "feedId": "AI",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:AMCASH+_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "AMCASH+_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:APR:1794916562",
+      "chain": "ethereum",
+      "feedId": "APR",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:ARKVX_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "ARKVX_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:AVLT_FUNDAMENTAL/USD:1794916562",
+      "chain": "ethereum",
+      "feedId": "AVLT_FUNDAMENTAL/USD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:BCAP_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "BCAP_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:BRSRV_ETHEREUM_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "BRSRV_ETHEREUM_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:BTC:1794916562",
+      "chain": "ethereum",
+      "feedId": "BTC",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:BTCcx_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "BTCcx_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:BUIDL_DAILY_INTEREST_ACCRUAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "BUIDL_DAILY_INTEREST_ACCRUAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:BUIDL_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "BUIDL_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:BUIDL_I_ETHEREUM_DAILY_ACCRUAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "BUIDL_I_ETHEREUM_DAILY_ACCRUAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:BUIDL_I_ETHEREUM_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "BUIDL_I_ETHEREUM_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:CASH+_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "CASH+_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:CESR:1794916562",
+      "chain": "ethereum",
+      "feedId": "CESR",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:CURR_EOD:1794916562",
+      "chain": "ethereum",
+      "feedId": "CURR_EOD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:DLF_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "DLF_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:DLF_PUBLICATION_TS:1794916562",
+      "chain": "ethereum",
+      "feedId": "DLF_PUBLICATION_TS",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:ETH:1794916562",
+      "chain": "ethereum",
+      "feedId": "ETH",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:ETHFI:1794916562",
+      "chain": "ethereum",
+      "feedId": "ETHFI",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:ETHx/ETH:1794916562",
+      "chain": "ethereum",
+      "feedId": "ETHx/ETH",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:ETHx:1794916562",
+      "chain": "ethereum",
+      "feedId": "ETHx",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:FACTOR_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "FACTOR_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:FGCPP_EOD:1794916562",
+      "chain": "ethereum",
+      "feedId": "FGCPP_EOD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:FGC_EOD:1794916562",
+      "chain": "ethereum",
+      "feedId": "FGC_EOD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:HINC_ETHEREUM_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "HINC_ETHEREUM_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:HLScope_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "HLScope_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:HYB_FUNDAMENTAL/USD:1794916562",
+      "chain": "ethereum",
+      "feedId": "HYB_FUNDAMENTAL/USD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:LBTC_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "LBTC_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:NGI+_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "NGI+_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:PGNGI+_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "PGNGI+_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:PUFFER:1794916562",
+      "chain": "ethereum",
+      "feedId": "PUFFER",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:PYUSD:1794916562",
+      "chain": "ethereum",
+      "feedId": "PYUSD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:SIERRA_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "SIERRA_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:SPK:1794916562",
+      "chain": "ethereum",
+      "feedId": "SPK",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:STAC_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "STAC_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:SWELL/ETH:1794916562",
+      "chain": "ethereum",
+      "feedId": "SWELL/ETH",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:USD3:1794916562",
+      "chain": "ethereum",
+      "feedId": "USD3",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:USDC:1794916562",
+      "chain": "ethereum",
+      "feedId": "USDC",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:USDC_V2:1794916562",
+      "chain": "ethereum",
+      "feedId": "USDC_V2",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:USDT_V2:1794916562",
+      "chain": "ethereum",
+      "feedId": "USDT_V2",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:USDe:1794916562",
+      "chain": "ethereum",
+      "feedId": "USDe",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:USST_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "USST_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:VBILL_ETHEREUM_DAILY_ACCRUAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "VBILL_ETHEREUM_DAILY_ACCRUAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:VBILL_ETHEREUM_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "VBILL_ETHEREUM_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:VUSD_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "VUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:WBTC/BTC:1794916562",
+      "chain": "ethereum",
+      "feedId": "WBTC/BTC",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:WLFI:1794916562",
+      "chain": "ethereum",
+      "feedId": "WLFI",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:XRP:1794916562",
+      "chain": "ethereum",
+      "feedId": "XRP",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:XVS:1794916562",
+      "chain": "ethereum",
+      "feedId": "XVS",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:YUSD_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "YUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:beraSTONE_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "beraSTONE_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:bfBTC_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "bfBTC_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:cUSD_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "cUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:cbBTC:1794916562",
+      "chain": "ethereum",
+      "feedId": "cbBTC",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:eBTC/WBTC:1794916562",
+      "chain": "ethereum",
+      "feedId": "eBTC/WBTC",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:eUSD:1794916562",
+      "chain": "ethereum",
+      "feedId": "eUSD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:egETH_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "egETH_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:etrUSD_FUNDAMENTAL/USD:1794916562",
+      "chain": "ethereum",
+      "feedId": "etrUSD_FUNDAMENTAL/USD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:ezETH_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "ezETH_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:fxUSD:1794916562",
+      "chain": "ethereum",
+      "feedId": "fxUSD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:hwHLP_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "hwHLP_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:iBENJI_ETHEREUM_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "iBENJI_ETHEREUM_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:mzPRIME_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "mzPRIME_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:mzPRIME_TOTAL_SUPPLY:1794916562",
+      "chain": "ethereum",
+      "feedId": "mzPRIME_TOTAL_SUPPLY",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:mzUSD_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "mzUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:mzUSD_TOTAL_SUPPLY:1794916562",
+      "chain": "ethereum",
+      "feedId": "mzUSD_TOTAL_SUPPLY",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:nALPHA_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "nALPHA_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:nBASIS_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "nBASIS_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:nFALCON_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "nFALCON_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:nONRE_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "nONRE_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:nOPAL_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "nOPAL_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:oTFY_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "oTFY_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:oTFYe_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "oTFYe_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:pumpBTC/BTC:1794916562",
+      "chain": "ethereum",
+      "feedId": "pumpBTC/BTC",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:pzETH_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "pzETH_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:rswETH_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "rswETH_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:sUSDe:1794916562",
+      "chain": "ethereum",
+      "feedId": "sUSDe",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:sVUSD_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "sVUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:sYUSD_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "sYUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:sfrxETH/ETH:1794916562",
+      "chain": "ethereum",
+      "feedId": "sfrxETH/ETH",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:sthUSD_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "sthUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:strUSD_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "strUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:swETH_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "swETH_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:syrupUSDC_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "syrupUSDC_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:syzUSD_FUNDAMENTAL/USD:1794916562",
+      "chain": "ethereum",
+      "feedId": "syzUSD_FUNDAMENTAL/USD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:thBILL_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "thBILL_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:thUSD_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "thUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:trUSD_FUNDAMENTAL:1794916562",
+      "chain": "ethereum",
+      "feedId": "trUSD_FUNDAMENTAL",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:weETH/ETH:1794916562",
+      "chain": "ethereum",
+      "feedId": "weETH/ETH",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:wemUSD_FUNDAMENTAL/USD:1794916562",
+      "chain": "ethereum",
+      "feedId": "wemUSD_FUNDAMENTAL/USD",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:wstETH/stETH:1794916562",
+      "chain": "ethereum",
+      "feedId": "wstETH/stETH",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:wstETH:1794916562",
+      "chain": "ethereum",
+      "feedId": "wstETH",
+      "kind": "error",
+      "openedAt": 1794916562,
+      "closedAt": 1794957417,
+      "detail": "unavailable: every provider failed"
+    },
+    {
+      "id": "ethereum:USUAL:1794916071",
+      "chain": "ethereum",
+      "feedId": "USUAL",
+      "kind": "error",
+      "openedAt": 1794916071,
+      "closedAt": null,
+      "detail": "reverted: execution reverted"
+    }
+  ]
+}

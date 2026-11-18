@@ -1,0 +1,152 @@
+{
+  "lastPollAt": 1794993210,
+  "feeds": [
+    {
+      "feedId": "BTC",
+      "chains": {
+        "ethereum": {
+          "value": 64697.46517208,
+          "ageS": 4987,
+          "status": "ok"
+        },
+        "arbitrum": {
+          "value": 64715.14136994,
+          "ageS": 7087,
+          "status": "ok"
+        },
+        "base": {
+          "value": 64706.30849644,
+          "ageS": 13248,
+          "status": "ok"
+        }
+      },
+      "spreadPct": 0.027317580419488084
+    },
+    {
+      "feedId": "ETH",
+      "chains": {
+        "ethereum": {
+          "value": 1807.59,
+          "ageS": 1027,
+          "status": "ok"
+        },
+        "arbitrum": {
+          "value": 1807.6669078,
+          "ageS": 3759,
+          "status": "ok"
+        },
+        "base": {
+          "value": 1810.48757345,
+          "ageS": 13979,
+          "status": "ok"
+        }
+      },
+      "spreadPct": 0.16029354951938793
+    },
+    {
+      "feedId": "USDC",
+      "chains": {
+        "ethereum": {
+          "value": 0.99990411,
+          "ageS": 81247,
+          "status": "ok"
+        },
+        "arbitrum": {
+          "value": 0.99977398,
+          "ageS": 19495,
+          "status": "ok"
+        },
+        "base": {
+          "value": 0.99976896,
+          "ageS": 43071,
+          "status": "ok"
+        }
+      },
+      "spreadPct": 0.013518055350867681
+    },
+    {
+      "feedId": "XVS",
+      "chains": {
+        "ethereum": {
+          "value": 2.36137596,
+          "ageS": 27451,
+          "status": "ok"
+        },
+        "arbitrum": {
+          "value": 2.37036597,
+          "ageS": 36158,
+          "status": "ok"
+        },
+        "base": {
+          "value": 2.36137596,
+          "ageS": 27457,
+          "status": "ok"
+        }
+      },
+      "spreadPct": 0.3807106598984674
+    },
+    {
+      "feedId": "cbBTC",
+      "chains": {
+        "ethereum": {
+          "value": 64635.83788039,
+          "ageS": 13903,
+          "status": "ok"
+        },
+        "arbitrum": {
+          "value": 64679.03011672,
+          "ageS": 13868,
+          "status": "ok"
+        },
+        "base": {
+          "value": 64635.83788039,
+          "ageS": 13897,
+          "status": "ok"
+        }
+      },
+      "spreadPct": 0.06682397528431798
+    },
+    {
+      "feedId": "thBILL_FUNDAMENTAL",
+      "chains": {
+        "ethereum": {
+          "value": 1.04337224,
+          "ageS": 16327,
+          "status": "ok"
+        },
+        "arbitrum": {
+          "value": 1.04337224,
+          "ageS": 19398,
+          "status": "ok"
+        },
+        "base": {
+          "value": 1.04337224,
+          "ageS": 21177,
+          "status": "ok"
+        }
+      },
+      "spreadPct": 0.0
+    },
+    {
+      "feedId": "wstETH",
+      "chains": {
+        "ethereum": {
+          "value": 2261.98599663,
+          "ageS": 5167,
+          "status": "ok"
+        },
+        "arbitrum": {
+          "value": 2260.7271333,
+          "ageS": 14028,
+          "status": "ok"
+        },
+        "base": {
+          "value": 2258.36914635,
+          "ageS": 11567,
+          "status": "ok"
+        }
+      },
+      "spreadPct": 0.15998614900156327
+    }
+  ]
+}

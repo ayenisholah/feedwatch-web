@@ -1,0 +1,648 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Feedwatch API",
+    "description": "Read-only data on RedStone push feeds on Ethereum, Arbitrum and Base: freshness, missed updates, cross-chain spread and incidents.",
+    "license": {
+      "name": "MIT",
+      "identifier": "MIT"
+    },
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/compare": {
+      "get": {
+        "tags": [
+          "feeds"
+        ],
+        "summary": "The feeds present on all three chains, side by side, with their spread.",
+        "operationId": "compare_feeds",
+        "responses": {
+          "200": {
+            "description": "Feeds on every chain, by feed ID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompareResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "InfluxDB unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/feeds": {
+      "get": {
+        "tags": [
+          "feeds"
+        ],
+        "summary": "Every feed's latest round and check, seen in the last 15 minutes.",
+        "operationId": "feeds",
+        "parameters": [
+          {
+            "name": "chain",
+            "in": "query",
+            "description": "Only this chain: `ethereum`, `arbitrum` or `base`.",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "base"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Feeds by chain, then feed ID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeedsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unknown chain",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "InfluxDB unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/feeds/{chain}/{feedId}": {
+      "get": {
+        "tags": [
+          "feeds"
+        ],
+        "summary": "One feed: its latest round and check, and 24 hours of value and age in 5-minute windows.",
+        "operationId": "feed_detail",
+        "parameters": [
+          {
+            "name": "chain",
+            "in": "path",
+            "description": "`ethereum`, `arbitrum` or `base`",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "ethereum"
+          },
+          {
+            "name": "feedId",
+            "in": "path",
+            "description": "The manifest key",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "ETH"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The feed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeedDetail"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unknown chain",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No data for this feed in 24 hours",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "InfluxDB unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Health of the API, InfluxDB and the poller. Always 200 while the API runs; answers within 1 s.",
+        "operationId": "health",
+        "responses": {
+          "200": {
+            "description": "Health; `degraded` if InfluxDB is down or the last poll is over 180 s old",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Health"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/incidents": {
+      "get": {
+        "tags": [
+          "incidents"
+        ],
+        "summary": "Incidents from the last 30 days, newest first, at most 500.",
+        "operationId": "incidents",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "description": "`open` (the default) or `all`.",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "all"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Incidents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IncidentsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unknown status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "InfluxDB unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Chain": {
+        "type": "string",
+        "description": "The chains Feedwatch reads, in display order.",
+        "enum": [
+          "ethereum",
+          "arbitrum",
+          "base"
+        ]
+      },
+      "ChainValue": {
+        "type": "object",
+        "description": "One chain's side of a [`CompareRow`].",
+        "required": [
+          "status"
+        ],
+        "properties": {
+          "value": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double",
+            "description": "The price on this chain, if it could be read."
+          },
+          "ageS": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "format": "int64",
+            "description": "Seconds since this chain's feed was last updated.",
+            "minimum": 0
+          },
+          "status": {
+            "type": "string",
+            "description": "This chain's latest check status."
+          }
+        }
+      },
+      "CompareResponse": {
+        "type": "object",
+        "description": "Body of `GET /api/compare`.",
+        "required": [
+          "feeds"
+        ],
+        "properties": {
+          "lastPollAt": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "format": "int64",
+            "description": "When the poller last finished a cycle, Unix seconds.",
+            "minimum": 0
+          },
+          "feeds": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CompareRow"
+            },
+            "description": "The feeds present on Ethereum, Arbitrum and Base, by feed ID."
+          }
+        }
+      },
+      "CompareRow": {
+        "type": "object",
+        "description": "One feed present on every chain, side by side.",
+        "required": [
+          "feedId",
+          "chains"
+        ],
+        "properties": {
+          "feedId": {
+            "type": "string",
+            "description": "The manifest key, such as `ETH`."
+          },
+          "chains": {
+            "type": "object",
+            "description": "Each chain's value, age and status, keyed `ethereum`, `arbitrum` and `base`.",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ChainValue"
+            },
+            "propertyNames": {
+              "type": "string",
+              "description": "The chains Feedwatch reads, in display order.",
+              "enum": [
+                "ethereum",
+                "arbitrum",
+                "base"
+              ]
+            }
+          },
+          "spreadPct": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double",
+            "description": "`(max - min) / median × 100` over the chains' values; `null` with fewer than two values."
+          }
+        }
+      },
+      "ErrorBody": {
+        "type": "object",
+        "description": "The body of every error response.",
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "What went wrong, for people."
+          }
+        }
+      },
+      "FeedDetail": {
+        "type": "object",
+        "description": "Body of `GET /api/feeds/{chain}/{feedId}`.",
+        "required": [
+          "series"
+        ],
+        "properties": {
+          "latest": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/FeedSummary",
+                "description": "The latest round and check, if the feed was seen in the last 15 minutes."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "series": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SeriesPoint"
+            },
+            "description": "Value and age over 24 hours, in 5-minute windows, oldest first."
+          }
+        }
+      },
+      "FeedSummary": {
+        "type": "object",
+        "description": "A feed's latest round and check.",
+        "required": [
+          "chain",
+          "feedId",
+          "status"
+        ],
+        "properties": {
+          "chain": {
+            "$ref": "#/components/schemas/Chain",
+            "description": "The chain the feed is on."
+          },
+          "feedId": {
+            "type": "string",
+            "description": "The manifest key, such as `ETH`."
+          },
+          "status": {
+            "type": "string",
+            "description": "`ok`, `stale`, `drift` or `error`; `unknown` if no check was found."
+          },
+          "checkedAt": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "format": "int64",
+            "description": "When the latest check was written, Unix seconds.",
+            "minimum": 0
+          },
+          "value": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double",
+            "description": "The price, scaled by the feed's decimals. Absent when the feed couldn't be read."
+          },
+          "answerRaw": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The raw integer answer."
+          },
+          "roundId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The round ID."
+          },
+          "updatedAt": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "format": "int64",
+            "description": "When the feed was last updated on chain, Unix seconds.",
+            "minimum": 0
+          },
+          "ageS": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "format": "int64",
+            "description": "Seconds since that update, at the time of the read.",
+            "minimum": 0
+          },
+          "heartbeatS": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "format": "int64",
+            "description": "The heartbeat (or daily period for cron feeds), in seconds.",
+            "minimum": 0
+          },
+          "deviationThresholdPct": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double",
+            "description": "The deviation trigger, in percent; absent for cron feeds."
+          },
+          "referenceDeviationPct": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double",
+            "description": "How far the feed is from the reference price, in percent."
+          },
+          "referenceSource": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Where the reference price came from."
+          }
+        }
+      },
+      "FeedsResponse": {
+        "type": "object",
+        "description": "Body of `GET /api/feeds`.",
+        "required": [
+          "feeds"
+        ],
+        "properties": {
+          "lastPollAt": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "format": "int64",
+            "description": "When the poller last finished a cycle, Unix seconds.",
+            "minimum": 0
+          },
+          "feeds": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FeedSummary"
+            },
+            "description": "Every feed seen in the last 15 minutes, by chain then feed ID."
+          }
+        }
+      },
+      "Health": {
+        "type": "object",
+        "description": "Body of `GET /api/health`.",
+        "required": [
+          "status",
+          "influx"
+        ],
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "`ok`, or `degraded` when InfluxDB is down or the poller has stopped writing."
+          },
+          "influx": {
+            "type": "string",
+            "description": "`ok` or `down`."
+          },
+          "lastPollAt": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "format": "int64",
+            "description": "When the poller last finished a cycle, Unix seconds.",
+            "minimum": 0
+          }
+        }
+      },
+      "Incident": {
+        "type": "object",
+        "description": "One incident, from its open and close events.",
+        "required": [
+          "id",
+          "chain",
+          "feedId",
+          "kind"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The poller's incident ID."
+          },
+          "chain": {
+            "$ref": "#/components/schemas/Chain",
+            "description": "The chain the feed is on."
+          },
+          "feedId": {
+            "type": "string",
+            "description": "The manifest key."
+          },
+          "kind": {
+            "type": "string",
+            "description": "`stale`, `drift` or `error`."
+          },
+          "openedAt": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "format": "int64",
+            "description": "When it opened, Unix seconds; `null` if the open event is older than 30 days.",
+            "minimum": 0
+          },
+          "closedAt": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "format": "int64",
+            "description": "When it closed, Unix seconds; `null` while open.",
+            "minimum": 0
+          },
+          "detail": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "What the poller saw when it opened (or closed, if the open is out of range)."
+          }
+        }
+      },
+      "IncidentsResponse": {
+        "type": "object",
+        "description": "Body of `GET /api/incidents`.",
+        "required": [
+          "incidents"
+        ],
+        "properties": {
+          "incidents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Incident"
+            },
+            "description": "Incidents from the last 30 days, newest first, at most 500."
+          }
+        }
+      },
+      "SeriesPoint": {
+        "type": "object",
+        "description": "One point of a feed's 24-hour series.",
+        "required": [
+          "t"
+        ],
+        "properties": {
+          "t": {
+            "type": "integer",
+            "format": "int64",
+            "description": "End of the 5-minute window, Unix seconds.",
+            "minimum": 0
+          },
+          "value": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "format": "double",
+            "description": "The last price in the window."
+          },
+          "ageS": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "format": "int64",
+            "description": "The last age in the window, seconds.",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "latest": {
+    "chain": "ethereum",
+    "feedId": "USUAL",
+    "status": "error",
+    "checkedAt": 1794993210,
+    "value": null,
+    "answerRaw": null,
+    "roundId": null,
+    "updatedAt": null,
+    "ageS": null,
+    "heartbeatS": 86400,
+    "deviationThresholdPct": 0.5,
+    "referenceDeviationPct": null,
+    "referenceSource": null
+  },
+  "series": []
+}

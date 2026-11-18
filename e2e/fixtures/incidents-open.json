@@ -1,0 +1,13 @@
+{
+  "incidents": [
+    {
+      "id": "ethereum:USUAL:1794916071",
+      "chain": "ethereum",
+      "feedId": "USUAL",
+      "kind": "error",
+      "openedAt": 1794916071,
+      "closedAt": null,
+      "detail": "reverted: execution reverted"
+    }
+  ]
+}

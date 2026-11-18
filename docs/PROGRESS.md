@@ -6,22 +6,22 @@ Read this first. Update it in the same commit as the work. The system-wide state
 
 ## Next step
 
-Wait until the API serves data (M2) and publishes `openapi.json`. Then start branch `feat/api-client` (part of FR-FW-7):
+Branch `feat/overview` (FR-FW-7), following the M3 plan:
 
-- Add `zod` and `openapi-typescript`.
-- Generate types from the pinned `openapi.json` into `lib/api/schema.ts`.
-- Write `lib/api/client.ts`, which fetches `/api/*`, parses the response with Zod and returns a result.
-- Write `lib/api/use-api.ts`, which polls every 30 s and exposes loading, empty, error and data states.
-- Add a contract test that fails when the generated types differ from the pinned spec.
+- Copy `SearchField` and its test from LendLoop.
+- Add `components/feeds/`: `AppShell` (nav with `aria-current`, a Grafana link, ThemeToggle, and a last-poll pill from `/api/health`), `StatusBadge`, `AgeBar` (age against heartbeat, a meter with a 1.1 grace marker) and `FeedTable` (a semantic table sorted by severity, rows linking to `/feed/?chain=…&id=…`). Add `lib/format.ts`.
+- `app/page.tsx`: StatWidgets, a chain SegmentedControl kept in `?chain=`, an issues-only toggle and search. Loading, empty, error (with Retry) and no-match states. Fetch with `useApi("/api/feeds", FeedsResponseSchema)`.
+- Add `components/feeds/**` to the 100% coverage thresholds. Playwright stubs `/api/*` with `e2e/fixtures/*.json` for each state, in both themes, with axe.
 
-After that: `feat/overview` (StatWidgets, chain SegmentedControl, feed table), `feat/feed-detail`, `feat/compare-page` and `feat/incidents-page`.
+Then `feat/feed-detail`, `feat/compare-page` and `feat/incidents-page`.
 
 ## Done
 
-| Date       | Work                                                                                                                                                                                                                                                                                                                                                                 |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2026-11-18 | `ci/deploy-on-merge` (NFR-3): a `Deploy` workflow calls feedwatch-platform's reusable deploy workflow after `CI` passes on `main`, so every merge reaches production (platform ADR 0008). Needs the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` secrets from platform `scripts/aws/set-deploy-secrets.sh`.                                                       |
-| 2026-11-16 | Scaffold: Next.js 16 static export; Frox tokens, `cn`, theme and components (Alert, Badge, Button, Card, EmptyState, PageHeader, SegmentedControl, Spinner, StatWidget, ThemeToggle, trimmed icons) copied from LendLoop with their tests; placeholder home page; Vitest (28 tests), Playwright smoke in light and dark with axe; ESLint, Prettier, knip, jscpd; CI. |
+| Date       | Work                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2026-11-18 | `feat/api-client` (part of FR-FW-7). Pinned feedwatch-api **v0.1.0**: `lib/api/openapi.json`, with `lib/api/schema.ts` generated by openapi-typescript (`npm run api:types`; `scripts/update-openapi.sh vX.Y.Z` pins a new release). `lib/api/schemas.ts` has Zod 4 schemas for every response, and compile-time checks make each equal its generated type (a drifted field fails `tsc`, tested). `lib/api/client.ts` `fetchJson` never throws on failure: network, 4xx/5xx `{error}` and contract mismatches become messages. `lib/api/use-api.ts` polls every 30 s, pauses in hidden tabs, keeps the last data on error, and has `retry`. Contract tests: types regenerate byte for byte, the pin matches a sibling feedwatch-api, and seven recorded production responses (`e2e/fixtures/`) parse. Lockfile made with Node 24.19 from nvm (Docker was down). |
+| 2026-11-18 | `ci/deploy-on-merge` (NFR-3): a `Deploy` workflow calls feedwatch-platform's reusable deploy workflow after `CI` passes on `main`, so every merge reaches production (platform ADR 0008). Needs the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` secrets from platform `scripts/aws/set-deploy-secrets.sh`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 2026-11-16 | Scaffold: Next.js 16 static export; Frox tokens, `cn`, theme and components (Alert, Badge, Button, Card, EmptyState, PageHeader, SegmentedControl, Spinner, StatWidget, ThemeToggle, trimmed icons) copied from LendLoop with their tests; placeholder home page; Vitest (28 tests), Playwright smoke in light and dark with axe; ESLint, Prettier, knip, jscpd; CI.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 ## In progress
 
@@ -34,5 +34,4 @@ Nothing.
 ## Notes
 
 - Copied component fixes for `noUncheckedIndexedAccess`: `SegmentedControl` guards its option and key lookups.
-- Zod was removed for now, because knip fails on unused dependencies. Add it back in `feat/api-client`.
 - Generate `package-lock.json` under Node 24 (`docker run --rm -u "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/app" -w /app node:24 npm install --package-lock-only`). A lockfile from a newer local Node leaves out optional entries, and `npm ci` fails in CI.
