@@ -3,6 +3,8 @@ import { cleanup } from "@testing-library/react";
 import { afterEach } from "vitest";
 
 afterEach(() => {
+  // Contract tests run in the node environment, with no DOM to clean.
+  if (typeof document === "undefined") return;
   cleanup();
   document.documentElement.removeAttribute("data-theme");
   try {
