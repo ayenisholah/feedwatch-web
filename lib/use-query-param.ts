@@ -40,3 +40,13 @@ export function useNow(intervalMs = 5_000): number {
   }, [intervalMs]);
   return now;
 }
+
+/** The page's query string, or null until mounted (the static export renders without a URL). */
+export function useSearchParams(): URLSearchParams | null {
+  const [params, setParams] = useState<URLSearchParams | null>(null);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- read the URL after mount
+    setParams(new URLSearchParams(window.location.search));
+  }, []);
+  return params;
+}
