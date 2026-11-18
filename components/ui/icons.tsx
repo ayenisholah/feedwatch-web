@@ -79,3 +79,14 @@ export const ChartIcon = (p: IconProps) => (
 
 // Category icons (lib/categories.ts) and the How-it-works / search / photo set.
 // View switcher (board layouts).
+export const CloseIcon = (p: IconProps) => (
+  <Icon {...p}>
+    <path d="M6 6l12 12M18 6 6 18" />
+  </Icon>
+);
+export const SearchIcon = (p: IconProps) => (
+  <Icon {...p}>
+    <circle cx="11" cy="11" r="7" />
+    <path d="m20 20-3.5-3.5" />
+  </Icon>
+);
