@@ -15,7 +15,7 @@ export default defineConfig({
       provider: "v8",
       include: ["components/**/*.tsx", "lib/**/*.ts", "app/**/*.tsx"],
       exclude: ["**/*.test.*", "app/layout.tsx", "components/ui/icons.tsx"],
-      // Feedwatch's own code is held to 100%. components/ui was copied from the LendLoop Frox library
+      // Feedwatch's own code (app/, lib/, components/feeds/) is held to 100%. components/ui was copied from the LendLoop Frox library
       // with its existing tests; its floor is lower and rises as M3 adds tests for the parts it uses.
       thresholds: {
         perFile: true,
@@ -25,6 +25,7 @@ export default defineConfig({
         branches: 75,
         "app/**": { lines: 100, functions: 100, statements: 100, branches: 100 },
         "lib/**": { lines: 100, functions: 100, statements: 100, branches: 100 },
+        "components/feeds/**": { lines: 100, functions: 100, statements: 100, branches: 100 },
       },
     },
   },
