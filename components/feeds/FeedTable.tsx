@@ -10,7 +10,7 @@ const COLUMNS: { label: string; right?: boolean }[] = [
   { label: "Feed" },
   { label: "Chain" },
   { label: "Status" },
-  { label: "Value", right: true },
+  { label: "Price", right: true },
   { label: "Updated" },
   { label: "Age vs heartbeat" },
   { label: "vs reference", right: true },

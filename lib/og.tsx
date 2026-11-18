@@ -71,7 +71,7 @@ export function OgCard({ title, subtitle }: { title: string; subtitle: string })
 export const OG_PAGES = {
   overview: {
     title: "RedStone feed health",
-    subtitle: "Every push price feed, checked each minute against its heartbeat and a reference price.",
+    subtitle: "Every push price feed, checked every 15 seconds against its heartbeat and a reference price.",
   },
   compare: {
     title: "Compare chains",

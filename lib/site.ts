@@ -9,7 +9,7 @@ export const SITE = {
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://feedwatch.sholaayeni.xyz").replace(/\/+$/, ""),
   tagline: "Live health of RedStone push price feeds",
   description:
-    "Feedwatch checks every RedStone push price feed on Ethereum, Arbitrum and Base each minute: freshness against its heartbeat, missed updates against a reference price, and how far the same feed differs across chains.",
+    "Feedwatch checks every RedStone push price feed on Ethereum, Arbitrum and Base every 15 seconds: freshness against its heartbeat, missed updates against a reference price, and how far the same feed differs across chains.",
   keywords: [
     "RedStone",
     "oracle",

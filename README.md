@@ -17,7 +17,7 @@ Part of [Feedwatch](https://github.com/ayenisholah/feedwatch-platform/blob/main/
 | Compare   | `/compare/`                    | The feeds on Ethereum, Arbitrum and Base side by side, highest and lowest marked, with the spread                                                                   |
 | Incidents | `/incidents/`                  | Open incidents or the last 30 days; incidents that happened together (an outage) are grouped                                                                        |
 
-Every page has loading, empty and error states (with Try again), refreshes every 30 seconds while visible, works by keyboard, and passes axe in light and dark themes.
+Every page has loading, empty and error states (with Try again), refreshes every 15 seconds while visible, works by keyboard, and passes axe in light and dark themes.
 
 ## How it reads the API
 

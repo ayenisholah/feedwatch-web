@@ -34,7 +34,7 @@ test.describe("live site", () => {
     await expect(page.getByRole("heading", { level: 1, name: "WBTC/BTC" })).toBeVisible({ timeout: 20_000 });
     await expect(page.getByRole("figure")).toHaveCount(2);
     await expectNoAxeViolations(page);
-    const chart = page.getByRole("group", { name: /^Value chart/ });
+    const chart = page.getByRole("group", { name: /^Price chart/ });
     await chart.focus();
     await page.keyboard.press("End");
     await expect(chart.locator("[aria-live]")).toContainText("UTC: ");

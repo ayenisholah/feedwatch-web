@@ -68,7 +68,7 @@ function Facts({ feed, nowMs }: { feed: FeedSummary; nowMs: number }) {
   return (
     <Card as="section" aria-label="Latest reading">
       <dl className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        <Fact label="Value">
+        <Fact label="Price">
           <span className="text-h5 tabular-nums">{formatPrice(feed.value)}</span>
           <span className="block text-description break-all text-fg-muted">raw {feed.answerRaw ?? MISSING}</span>
         </Fact>
@@ -115,7 +115,7 @@ function Charts({ detail }: { detail: Detail }) {
     <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
       <Card>
         <LineChart
-          title="Value"
+          title="Price"
           summary={`Last 24 hours, every 5 minutes: low ${formatPrice(Math.min(...range))}, high ${formatPrice(Math.max(...range))}.`}
           points={prices}
           format={formatPrice}
