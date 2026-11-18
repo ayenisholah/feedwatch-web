@@ -101,7 +101,7 @@ export function Overview() {
     <>
       <PageHeader
         title="Feeds"
-        description="Every RedStone push price feed on Ethereum, Arbitrum and Base, checked each minute against its heartbeat and a reference price."
+        description="Every RedStone push price feed on Ethereum, Arbitrum and Base, checked every 15 seconds against its heartbeat and a reference price."
       />
       <DataState
         result={result}
@@ -112,7 +112,7 @@ export function Overview() {
           <EmptyState
             icon={<ChartIcon />}
             title="No feeds reported in the last 15 minutes"
-            description="The poller may be restarting. This page refreshes every 30 seconds."
+            description="The poller may be restarting. This page refreshes every 15 seconds."
           />
         }
       >

@@ -27,7 +27,7 @@ describe("FeedDetail", () => {
     expect(screen.getByText("Ethereum · RedStone push feed")).toBeInTheDocument();
     expect(screen.getByText("OK")).toBeInTheDocument();
     expect(screen.getByText(/vs reference: 0\.210% \(chainlink\)/)).toBeInTheDocument();
-    expect(screen.getByRole("figure", { name: "Value" })).toBeInTheDocument();
+    expect(screen.getByRole("figure", { name: "Price" })).toBeInTheDocument();
     expect(screen.getByRole("figure", { name: "Age (hours)" })).toBeInTheDocument();
     expect(screen.getByText("heartbeat 1d", { selector: "text" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "← All feeds" })).toHaveAttribute("href", "/");

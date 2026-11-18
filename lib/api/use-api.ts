@@ -4,8 +4,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { z } from "zod";
 import { type ApiError, fetchJson } from "./client";
 
-/** How often pages refresh: the API caches data routes for 30 s, so faster gains nothing. */
-export const REFRESH_MS = 30_000;
+/** How often pages refresh: the poller reads every 15 s and the API caches for 15 s, so faster gains nothing. */
+export const REFRESH_MS = 15_000;
 
 export type ApiState<T> =
   | { state: "loading" }

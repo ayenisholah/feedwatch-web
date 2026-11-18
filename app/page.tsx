@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "RedStone feed health",
   description:
-    "Every RedStone push price feed on Ethereum, Arbitrum and Base: status, value, age against its heartbeat and distance from a reference price, checked each minute.",
+    "Every RedStone push price feed on Ethereum, Arbitrum and Base: status, price, age against its heartbeat and distance from a reference price, checked every 15 seconds.",
   path: "/",
   home: true,
 });

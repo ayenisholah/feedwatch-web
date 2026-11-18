@@ -12,7 +12,7 @@ test.describe("feed detail", () => {
     await expect(page).toHaveURL(/\/feed\/\?chain=ethereum&id=ETH$/);
     await expect(page.getByRole("heading", { level: 1, name: "ETH" })).toBeVisible();
     await expect(page.getByRole("region", { name: "Latest reading" })).toContainText("1,807.59");
-    await expect(page.getByRole("figure", { name: "Value" })).toBeVisible();
+    await expect(page.getByRole("figure", { name: "Price" })).toBeVisible();
     await expect(page.getByRole("figure", { name: "Age (hours)" })).toBeVisible();
     await expectNoAxeViolations(page);
   });
@@ -20,7 +20,7 @@ test.describe("feed detail", () => {
   test("[FR-FW-7] reads a chart by keyboard", async ({ page }) => {
     await stubApi(page, { "/api/feeds/ethereum/ETH": { body: fixture("feed-ethereum-ETH") } });
     await page.goto("/feed/?chain=ethereum&id=ETH");
-    const chart = page.getByRole("group", { name: /^Value chart/ });
+    const chart = page.getByRole("group", { name: /^Price chart/ });
     await chart.focus();
     await page.keyboard.press("End");
     await expect(chart).toContainText("1,807.59");
@@ -63,7 +63,7 @@ test.describe("feed detail", () => {
     await expectNoAxeViolations(page);
     fail = false;
     await alert.getByRole("button", { name: "Try again" }).click();
-    await expect(page.getByRole("figure", { name: "Value" })).toBeVisible();
+    await expect(page.getByRole("figure", { name: "Price" })).toBeVisible();
   });
 
   test("[FR-FW-7] shows the loading state", async ({ page }) => {
